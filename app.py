@@ -3,6 +3,8 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # In-memory data store
+
+
 items = {}
 item_id_counter = 1
 
@@ -42,7 +44,5 @@ def delete_item(item_id):
     return jsonify({"message": "Item not found"}), 404
 
 if __name__ == '__main__':
+
     app.run(debug=True)
-
-
-    
